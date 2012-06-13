@@ -322,8 +322,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (org-cancelled-kwd-face ((t (,@fg-green ,@bg-base03))))
              (org-delegated-kwd-face ((t (,@fg-cyan ,@bg-base03))))
              ;; outline - pandocBlockQuoteLeader*
-             (outline-1 ((t (,@fmt-none ,@fg-blue))))
-             (outline-2 ((t (,@fmt-none ,@fg-cyan))))
+             (outline-1 ((t (,@fmt-bold ,@fg-blue))))
+             (outline-2 ((t (,@fmt-bold ,@fg-cyan))))
              (outline-3 ((t (,@fmt-none ,@fg-yellow))))
              (outline-4 ((t (,@fmt-none ,@fg-red))))
              (outline-5 ((t (,@fmt-none ,@fg-base0))))
