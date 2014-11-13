@@ -80,7 +80,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
 (defvar which-flet
   "This variable will store either flet or cl-flet depending on the Emacs
   version. flet was deprecated in in 24.3")
-(if (and (> emacs-major-version 24) (> emacs-minor-version 2))
+(if (or (> emacs-major-version 24)
+        (and (>= emacs-major-version 24) (> emacs-minor-version 2)))
     (fset 'which-flet 'cl-flet)
   (fset 'which-flet 'flet))
 
@@ -200,6 +201,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (isearch ((t (,@fmt-stnd ,@fg-orange ,@bg-back)))) ; IncSearch
              (isearch-fail ((t (,@fmt-stnd ,@fg-orange ,@bg-back)))) ; IncSearch
              (lazy-highlight ((t (,@fmt-revr ,@fg-yellow ,@bg-back)))) ; Search
+             (match ((t (,@fmt-revr ,@fg-yellow ,@bg-back)))) ; Occur
              (link ((t (,@fmt-undr ,@fg-violet))))
              (link-visited ((t (,@fmt-undr ,@fg-magenta))))
              (menu ((t (,@fg-base0 ,@bg-base02))))
@@ -364,6 +366,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (widget-single-line-field ((t (:inherit widget-field))))
              ;; extra modules
              ;; -------------
+	     ;; ace-jump-mode
+	     (ace-jump-face-background ((t (,@fmt-none ,@fg-base01))))
+	     (ace-jump-face-foreground ((t (,@fmt-bold ,@fg-red))))
 	     ;; bm visual bookmarks
 	     (bm-fringe-face ((t (,@bg-orange ,@fg-base03))))
 	     (bm-fringe-persistent-face ((t (,@bg-blue ,@fg-base03))))
@@ -501,6 +506,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (slime-repl-output-mouseover-face ((t (:box (:color ,base3)))))
              (slime-style-warning-face ((t (,@fmt-bold ,@fg-orange))))
              (slime-warning-face ((t (,@fmt-bold ,@fg-red)))) ; WarningMsg
+             ;; tabbar
+             (tabbar-selected ((t (,@bg-blue ,@fg-base02))))
+             (tabbar-unselected ((t (,@bg-base0 ,@fg-base02))))
+             (tabbar-modified ((t (,@bg-green ,@fg-base02))))
              ;; whitespace
              (whitespace-empty ((t (,@fg-red))))
              (whitespace-hspace ((t (,@fg-orange))))
