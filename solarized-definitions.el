@@ -542,6 +542,16 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              ;;flyspell
              (flyspell-incorrect ((t (,@fg-red))))
              (flyspell-duplicate ((t (,@fg-yellow))))
+             ;;magit
+             (magit-branch ((t (:foreground ,blue))))
+             (magit-log-head-label-head ((t (:foreground ,base2 :box 1))))
+             (magit-log-head-label-local ((t (:foreground ,blue :box 1))))
+             (magit-log-head-label-patches ((t (:foreground ,red :box 1))))
+             (magit-log-head-label-remote ((t (:foreground ,green :box 1))))
+             (magit-log-head-label-tags ((t (:foreground ,orange :box 1))))
+             (magit-log-head-label-wip ((t (:foreground ,blue :box 1))))
+             (magit-tag ((t (:foreground ,orange :box 1))))
+
 	     ;;ansi-term
 	     (term-color-black ((t ( ,@fg-base02))))
 	     (term-color-red ((t ( ,@fg-red))))
