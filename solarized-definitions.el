@@ -565,7 +565,6 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (magit-log-head-label-tags ((t (:foreground ,orange :box 1))))
              (magit-log-head-label-wip ((t (:foreground ,blue :box 1))))
              (magit-tag ((t (:foreground ,orange :box 1))))
-
              ;;ansi-term
              (term-color-black ((t ( ,@fg-base02))))
              (term-color-red ((t ( ,@fg-red))))
@@ -574,7 +573,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (term-color-blue ((t ( ,@fg-blue))))
              (term-color-magenta ((t ( ,@fg-magenta))))
              (term-color-cyan ((t ( ,@fg-cyan))))
-             (term-color-white ((t ( ,@fg-base00)))))
+             (term-color-white ((t ( ,@fg-base00))))
+             ;;ediff
+             (ediff-current-diff-A ((t (,@fmt-none))))
+             (ediff-fine-diff-A ((t (,@bg-base3))))
+             (ediff-current-diff-B ((t (,@fmt-none))))
+             (ediff-fine-diff-B ((t (,@bg-base3))))
+             )
+
 
             ((foreground-color . ,(when (<= 16 (display-color-cells)) base0))
              (background-color . ,back)
