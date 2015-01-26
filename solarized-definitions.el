@@ -246,25 +246,39 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                   `((diff-added ((t (,@fmt-revr ,@fg-green))))
                     (diff-changed ((t (,@fmt-revr ,@fg-yellow))))
                     (diff-removed ((t (,@fmt-revr ,@fg-red))))
+                    (diff-refine-added
+                     ((t (,@fmt-revr ,@fg-green ,@bg-back))))
                     (diff-refine-change
-                     ((t (,@fmt-revr ,@fg-blue ,@bg-back))))))
+                     ((t (,@fmt-revr ,@fg-yellow ,@bg-back))))
+                    (diff-refine-removed
+                     ((t (,@fmt-revr ,@fg-red ,@bg-back))))))
                  (low
                   `((diff-added ((t (,@fmt-undr ,@fg-green))))
                     (diff-changed ((t (,@fmt-undr ,@fg-yellow))))
                     (diff-removed ((t (,@fmt-bold ,@fg-red))))
+                    (diff-refine-added
+                     ((t (,@fmt-undr ,@fg-green ,@bg-back))))
                     (diff-refine-change
-                     ((t (,@fmt-undr ,@fg-blue ,@bg-back))))))
+                     ((t (,@fmt-undr ,@fg-yellow ,@bg-back))))
+                    (diff-refine-change
+                     ((t (,@fmt-undr ,@fg-red ,@bg-back))))))
                  (normal
                   (if window-system
                       `((diff-added ((t (,@fmt-bold ,@fg-green))))
                         (diff-changed ((t (,@fmt-bold ,@fg-yellow))))
                         (diff-removed ((t (,@fmt-bold ,@fg-red))))
+                        (diff-refine-added
+                         ((t (,@fmt-bold ,@fg-green ,@bg-back))))
                         (diff-refine-change
-                         ((t (,@fmt-bold ,@fg-blue ,@bg-back)))))
+                         ((t (,@fmt-bold ,@fg-yellow ,@bg-back))))
+                        (diff-refine-removed
+                         ((t (,@fmt-bold ,@fg-red ,@bg-back)))))
                     `((diff-added ((t (,@fg-green))))
                       (diff-changed ((t (,@fg-yellow))))
                       (diff-removed ((t (,@fg-red))))
-                      (diff-refine-change ((t (,@fg-blue ,@bg-back))))))))
+                      (diff-refine-added ((t (,@fg-green ,@bg-back))))
+                      (diff-refine-change ((t (,@fg-yellow ,@bg-back))))
+                      (diff-refine-removed ((t (,@fg-red ,@bg-back))))))))
              (diff-file-header ((t (,@bg-back))))
              (diff-header ((t (,@fg-base1 ,@bg-back))))
              ;; IDO
