@@ -575,10 +575,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (term-color-cyan ((t ( ,@fg-cyan))))
              (term-color-white ((t ( ,@fg-base00))))
              ;;ediff
-             (ediff-current-diff-A ((t (,@fmt-none))))
-             (ediff-fine-diff-A ((t (,@bg-base3))))
-             (ediff-current-diff-B ((t (,@fmt-none))))
-             (ediff-fine-diff-B ((t (,@bg-base3))))
+             (ediff-current-diff-A ((t (:background "#403030"))))
+             (ediff-fine-diff-A ((t (:background "#603030"))))
+             (ediff-current-diff-B ((t (:background "#255025"))))
+             (ediff-fine-diff-B ((t (:background "#306030"))))
              )
 
 
